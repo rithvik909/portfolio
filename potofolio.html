@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="potofolio.css">
+    <script src="https://kit.fontawesome.com/87e1fb9ce4.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#work">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Developer</p>
+            <h1>Hi, I'm <span> Rithvik Gudepu</span><br> from Hyderabad</h1>
+        </div>
+    </div>
+</div>
+<!--about-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/profile.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub">About Me</h1>
+                <p>I'm a dedicated developer specializing in web development , software engineering, with expertise in JavaScript, Python, SQL. Outside of coding, I enjoy staying active at the gym, experimenting with new recipes in the kitchen, and diving into a good book. This combination of technical skill and diverse hobbies fuels my creativity and problem-solving abilities.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>JavaScript</span><br>Web development</li>
+                        <li><span>SQL</span><br>Data analysis</li>
+                        <li><span>Python</span><br>Backend development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents exp" id="experience">
+                    <ul>
+                        <li><span>Cognine 2024</span><br>associate software engineer</li>
+                        <li><span>Value soft-tech sol intern</span><br>Python Intern</li>
+                    </ul>
+                </div>
+                <div class="tab-contents edu" id="education">
+                    <ul>
+                        <li><span>B-tech 2020-2024</span><br>CGPA-7.2</li>
+                        <li><span>Intermidiate 2018-2020</span><br>Score-891</li>
+                        <li><span>10th 2018</span><br>CGPA-9.2</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--my work-->
+
+<div id="work">
+    <div class="container">
+        <h1 class="sub">My Work</h1>
+        <div class="work-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>web design</h2>
+                <p>skjdfansldf sdjkfqwertyui piuytr ljhgf zxcvbn lkjhgf ratudkusydfgusdsdv hvihdvhsdihsidu askdvhashudfoashdnnksdjb sidiasdhfisd</p>
+                <a href="https://github.com/rithvik909">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-diagram-project"></i>
+                <h2>Major project</h2>
+                <p>skjdfansldf sdjkfqwertyui piuytr ljhgf zxcvbn lkjhgf ratudkusydfgusdsdv hvihdvhsdihsidu askdvhashudfoashdnnksdjb sidiasdhfisd</p>
+                <a href="https://github.com/rithvik909">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-dice-d20"></i>
+                <h2>Mini project</h2>
+                <p>skjdfansldf sdjkfqwertyui piuytr ljhgf zxcvbn lkjhgf ratudkusydfgusdsdv hvihdvhsdihsidu askdvhashudfoashdnnksdjb sidiasdhfisd</p>
+                <a href="https://github.com/rithvik909">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------contact--------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>g.rithvikreddy909@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91-6309428732</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/rithvik_reddy_g?igsh=cnVpNm82Njdkdndt"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/rithvik-reddy-g-a15aa22b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <button type="button" class="btn btn2"><a href="Rithvik Reddy G.pdf" download>Download CV</a></button>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Sumbit</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright © G.Rithvik. </p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
