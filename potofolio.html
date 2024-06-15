@@ -15,7 +15,7 @@
         <nav>
             <img src="images/logo.png" class="logo">
             <ul id="sidemenu">
-                <li><a href="# header">Home</a></li>
+                <li><a href="#header">Home</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#work">My Work</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -29,7 +29,9 @@
         </div>
     </div>
 </div>
+
 <!--about-->
+
 <div id="about">
     <div class="container">
         <div class="row">
@@ -59,9 +61,9 @@
                 </div>
                 <div class="tab-contents edu" id="education">
                     <ul>
-                        <li><span>B-tech 2020-2024</span><br>CGPA-7.2</li>
-                        <li><span>Intermidiate 2018-2020</span><br>Score-891</li>
-                        <li><span>10th 2018</span><br>CGPA-9.2</li>
+                        <li><span>2020-2024 B-Tech CSE</span><br>CGPA-7.2</li>
+                        <li><span>2018-2020 Intermidiate</span><br>Score-891</li>
+                        <li><span>2018 10TH </span><br>CGPA-9.2</li>
                     </ul>
                 </div>
             </div>
@@ -98,6 +100,7 @@
 </div>
 
 <!------contact--------->
+
 <div id="contact">
     <div class="container">
         <div class="row">
@@ -109,8 +112,9 @@
                     <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com/rithvik_reddy_g?igsh=cnVpNm82Njdkdndt"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/rithvik-reddy-g-a15aa22b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:g.rithvikreddy909@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-                <button type="button" class="btn btn2"><a href="Rithvik Reddy G.pdf" download>Download CV</a></button>
+                <button type="button" class="btn btn2" onclick="downloadCV()"><a href="Rithvik Reddy G.pdf" download>Download CV</a></button>
             </div>
             <div class="contact-right">
                 <form>
@@ -122,6 +126,9 @@
 
             </div>
         </div>
+        <button id="fetchButton">Fetch Data</button>
+        <h1 id="output"></h1>
+        <script src="sec.js"></script>
         <div class="copyright">
             <p>copyright © G.Rithvik. </p>
         </div>
