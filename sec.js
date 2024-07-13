@@ -27,7 +27,7 @@ function fetchData() {
 }
 
 
-document.getElementById('fetchButton').addEventListener('click', async () => {
+/*document.getElementById('fetchButton').addEventListener('click', async () => {
     try {
         const data = await fetchData();
         document.getElementById('output').textContent = JSON.stringify(data, null, 2);
@@ -48,4 +48,28 @@ async function fetchData() {
         throw error;
     }
 }
+*/
 
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents=document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+var sidemen = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemen.style.right="0";
+}
+
+function closemenu(){
+    sidemen.style.right="-200px";
+}

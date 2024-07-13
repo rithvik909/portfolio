@@ -6,6 +6,38 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="potofolio.css">
     <script src="https://kit.fontawesome.com/87e1fb9ce4.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!----------------- open and close menu --------------->
+    <script>
+        $(document).ready(function(){
+            $(".tab-links").click(function(){
+                $(".tab-links").removeClass("active-link");
+                $(".tab-contents").removeClass("active-tab");
+                $(this).addClass("active-link");
+                var tabname = $(this).attr("data-tab");
+                $("#" + tabname).addClass("active-tab");
+            });
+    
+            var $sidemen = $("#sidemenu");
+    
+            $("#openmenu").click(function(){
+                $sidemen.css("right", "0");
+            });
+    
+            $("#closemenu").click(function(){
+                $sidemen.css("right", "-200px");
+            });
+        });
+    </script>
+<!---------------- animations ---------------->
+<script> 
+    $(document).ready(function(){
+      $("#ka").click(function(){
+        $("#ko").animate({left: '250px'});
+      });
+    });
+    </script> 
+
 
 </head>
 <body>
@@ -134,9 +166,13 @@
         </div>
     </div>
 </div>
+<!-- animations -->
+<button id="ka"> start animation</button>
+<div id="ko" style="background:#ac0000;height:100px;width:100px;position:absolute;"></div>
 
 
-<script>
+
+<!-- <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents=document.getElementsByClassName("tab-contents");
     function opentab(tabname){
@@ -159,6 +195,8 @@
     function closemenu(){
         sidemen.style.right="-200px";
     }
-</script>
+</script> -->
+
+
 </body>
 </html>
